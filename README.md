@@ -35,3 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # BBU-CV-PROJECT
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      879     830     879      15604  cons0     197609 10:33:47 /usr/bin/PS
+      830       1     830      10688  cons0     197609 10:33:43 /usr/bin/bash
