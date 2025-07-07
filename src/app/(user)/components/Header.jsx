@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { useState } from 'react';
+import Image from 'next/image';
 import Modal from './Modal';
 
 const Header = () => {
@@ -12,16 +13,23 @@ const Header = () => {
         setShowSettingUpResume(false);
     };
 
-
   return (
     <>
-        <header className="bg-white p-4 border-b flex items-center justify-between">
-                <div className="w-1/2 flex ml-9 pb-5">
-                    <div className="flex pr-5"></div>
+        <header className="bg-white p-4 border-b border-gray-200 flex items-center justify-between">
+                <div className="w-1/2 flex ml-9 pb-2">
+                    <div className="flex pr-2">
+                        <Image
+                            src="/image/bbu_logo.png"
+                            alt="Logo"
+                            width={350} // 꼭 지정해야 함
+                            height={24}
+                            className="" // Tailwind 스타일 가능
+                        />
+                    </div>
                 </div>
                 <div className="flex items-center space-x-4 pb-5 relative">
                     {/* Notification Button */}
-                    <button className="text-gray-600 hover:text-blue-500" >
+                    <button className="cursor-pointer text-gray-600 hover:text-blue-500" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" >
                             <path d="M12.02 2.91c-3.31 0-6 2.69-6 6v2.89c0 .61-.26 1.54-.57 2.06L4.3 15.77c-.71 1.18-.22 2.49 1.08 2.93 4.31 1.44 8.96 1.44 13.27 0 1.21-.4 1.74-1.83 1.08-2.93l-1.15-1.91c-.3-.52-.56-1.45-.56-2.06V8.91c0-3.3-2.7-6-6-6Z" stroke="#292d32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"></path>
                             <path d="M13.87 3.2a6.754 6.754 0 0 0-3.7 0c.29-.74 1.01-1.26 1.85-1.26.84 0 1.56.52 1.85 1.26Z" stroke="#292d32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -34,24 +42,17 @@ const Header = () => {
          
                     <button className="btn-create-cv bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 cursor-pointer" onClick={onModalHandler}> Create New CV </button>
                     <div className="relative">
-                        {/* <Image src="" alt="user" className="h-8 w-8 rounded-full cursor-pointer"/>
-                        {dropdownOpen && (
-                            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg">
-                                <ul>
-                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Account Settings</li>
-                                    <Link href="" ><li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</li></Link>
-                                </ul>
-                            </div>
-                        )} */}
+                        <Image
+                            src="/image/profile.png"
+                            alt="profile"
+                            width={30} // 꼭 지정해야 함
+                            height={24}
+                            className="h-10 w-10 rounded-full cursor-pointer border-2 border-#ccc-500" // Tailwind 스타일 가능
+                        />
                     </div>
                 </div>
             </header>
             {showSettingUpResume && <Modal closeModal={closeModal} />}
-    
-    
-    
-    
-    
     </>
   )
 }

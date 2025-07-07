@@ -14,14 +14,12 @@ function Modal({ closeModal }) {
                         <div className="flex min-h-full items-end justify-center p-5 text-center sm:items-center sm:p-0">
                         <div className="relative w-[650px] transform overflow-hidden rounded-3xl bg-white p-5 text-center shadow-xl transition-all sm:my-8">
                             <div className="rounded-3xl bg-white px-0pb-0">
-                            <div className="flex justify-end">
-                                <button className="cursor-pointer" onClick={closeModal}> {/* Close Button */}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM9.17 14.83l5.66-5.66M14.83 14.83 9.17 9.17" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                </svg>
-                                </button>                       
-                                
-                                
+                                <div className="flex justify-end">
+                                    <button className="cursor-pointer" onClick={closeModal}> {/* Close Button */}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM9.17 14.83l5.66-5.66M14.83 14.83 9.17 9.17" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        </svg>
+                                    </button>                       
                                 </div>
                                 <h2 id="header" className="text-3xl text-black text-center font-semibold my-5" >Setting Up Your Resume</h2>
                                 <p className="text-gray-500 text-center">

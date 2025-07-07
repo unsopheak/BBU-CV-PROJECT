@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Trainee from './Trainee';
+import Experience from './Experience';
 
 const Education = () => {
+  const [showExperience, setShowExperience] = useState(false);
+  const [showPrev, setShowTrainee] = useState(false);
+
+  const onExperienceHandler = () => {
+    setShowExperience(true);
+  };
+
+  const onPrevHandler = () => {
+    setShowTrainee(true);
+  };
+
+  if (showPrev) {
+    return <Trainee />;
+  }
+
+  if (showExperience) {
+    return <Experience />;
+  }
   return (
     <>
            {/* <!-- Education Information Fieldset --> */}
@@ -42,7 +62,7 @@ const Education = () => {
                     <div className="mt-3 cursor-pointer">
                       <button type="button" id="btn-add-education" className="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM8 12h8M12 16V8" stroke="#4989ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM8 12h8M12 16V8" stroke="#4989ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                         </svg>
                         <p className="text-gray-500">Add another field</p>
                       </button>
@@ -50,8 +70,8 @@ const Education = () => {
                   </div>
 
                   <div className="mt-10 mb-5 flex justify-end gap-2">
-                    <button type="button" name="previous" className="previous cursor-pointer rounded border border-gray-300 px-6 py-2 text-black transition-colors">Previous</button>
-                    <button type="button" name="next" className="next cursor-pointer rounded bg-blue-500 px-6 py-2 text-white transition-colors hover:bg-blue-700">Next</button>
+                    <button type="button" name="previous" className="previous cursor-pointer rounded border border-gray-300 px-6 py-2 text-black transition-colors" onClick={onPrevHandler}>Previous</button>
+                    <button type="button" name="next" className="next cursor-pointer rounded bg-blue-500 px-6 py-2 text-white transition-colors hover:bg-blue-700" onClick={onExperienceHandler}>Next</button>
                   </div>
                 </fieldset>
     </>

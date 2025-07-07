@@ -11,7 +11,7 @@ const page = () => {
             {/* Main Content  */}
             <main className="container p-6 mx-auto" style={{flex:"1"}}>
                 <div className="flex justify-between">
-                    <h1 className="text-3xl font-bold mb-8">Good Morning, Data Team!</h1>
+                    <h1 className="text-3xl font-bold mb-8">Good Morning, BBU!</h1>
                     <div className="max-w-xl mx-4 w-96">
                         <div className="relative">
                             <input
@@ -20,7 +20,7 @@ const page = () => {
                                     className="w-full px-4 py-2  border-gray-300 border rounded-md"
                             />
                             <button
-                                    className="absolute right-0 top-0 h-full px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-r-md"
+                                    className="cursor-pointer absolute right-0 top-0 h-full px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-r-md"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M11 20a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM18.93 20.69c.53 1.6 1.74 1.76 2.67.36.85-1.28.29-2.33-1.25-2.33-1.14-.01-1.78.88-1.42 1.97Z"
